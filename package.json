@@ -1,0 +1,21 @@
+{
+  "name": "mysqldumps",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "prebuild": "yarn run rimraf dist",
+    "build": "npx swc ./src/index.ts -d dist -q",
+    "start": "node dest/index.js"
+  },
+  "dependencies": {
+    "mysqldump": "^3.2.0",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.165",
+    "@types/node": "^17.0.23",
+    "rimraf": "^3.0.2"
+  }
+}
